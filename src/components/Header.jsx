@@ -12,7 +12,6 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      //ken nahbtou 50 pixels fel page, nbadlou l background color mta3 l header
       window.scrollY > 50 ? setIsActive(true) : setIsActive(false);
     });
   }, []);
@@ -24,15 +23,21 @@ const Header = () => {
       } fixed w-full z-10 lg:px-8 transition-all shadow-md py-6`}
     >
       <div className="container mx-auto flex items-center justify-between h-full">
-        <Link to={"/"}>
-          <div className="w-[40px]">
-            <img src={Logo} alt="" />
-          </div>
-        </Link>
+        <div className="flex items-center justify-center gap-5">
+          <Link to={"/"}>
+            <div className="w-[40px]">
+              <img src={Logo} alt="" />
+            </div>
+          </Link>
+        </div>
+
+        <a href="/contact" className="font-semibold text-xl underline">
+          Feedback
+        </a>
 
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="cursor-pointer flex relative"
+          className="cursor-pointer flex relative flex-reverse"
         >
           <BsBag className="text-2xl" />
           <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">

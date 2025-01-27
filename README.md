@@ -1,4 +1,4 @@
-# ECommerce ENIS
+# Fashion Shop
 
 Site web réalisé par Haythem Frikha dans le cadre d'un projet semestriel.
 

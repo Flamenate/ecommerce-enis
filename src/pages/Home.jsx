@@ -1,5 +1,6 @@
 import Product from "../components/Product";
 import Hero from "../components/Hero";
+import Feedback from "../components/Feedback";
 import React, { useContext, useState } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 
@@ -30,7 +31,7 @@ const Home = () => {
                 category === "Shoes" ? "bg-gray-300" : ""
               }`}
             >
-              Shoes
+              Chaussures
             </button>
             <button
               onClick={() => filterByCategory("Clothes")}
@@ -38,7 +39,7 @@ const Home = () => {
                 category === "Clothes" ? "bg-gray-300" : ""
               }`}
             >
-              Clothes
+              Vêtements
             </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 lg:mx-8 gap-7 max-w-sm mx-auto md:max-w-none md:mx-0">

@@ -7,6 +7,8 @@ import ProductDetails from "./pages/ProductDetails";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Feedback from "./components/Feedback";
+import Recu from "./components/Recu";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/contact" element={<Feedback />}></Route>
+          <Route path="/recu" element={<Recu />}></Route>
           <Route path="/product/:id" element={<ProductDetails />}></Route>
         </Routes>
         <Sidebar />

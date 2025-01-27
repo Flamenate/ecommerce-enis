@@ -26,7 +26,14 @@ const ProductDetails = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0">
-            <img className="max-w-[200px] lg:max-w-xs" src={images[0]} alt="" />
+            <img
+              className="max-w-[200px] lg:max-w-xs"
+              src={images[0].slice(
+                images[0].indexOf("h"),
+                images[0].lastIndexOf("g") + 1
+              )}
+              alt=""
+            />
           </div>
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0">

@@ -16,7 +16,10 @@ const Product = ({ product }) => {
           <div className="w-[200px] mx-auto flex justify-center items-center">
             <img
               className="max-h-[160px] group-hover:scale-110 transition duration-300"
-              src={images[0]}
+              src={images[0].slice(
+                images[0].indexOf("h"),
+                images[0].lastIndexOf("g") + 1
+              )}
             />
           </div>
         </div>
@@ -42,7 +45,7 @@ const Product = ({ product }) => {
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>
 
-        <h2 className="font-semibbold">${price}</h2>
+        <h2 className="font-semibold">${price}</h2>
       </div>
     </div>
   );
